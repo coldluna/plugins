@@ -1,6 +1,6 @@
-package com.ruolin.manage.annotation;
+package org.grace.luna.annotation;
 
-import com.ruolin.manage.validator.IdentityCardValidator;
+import org.grace.luna.validator.IdentityCardValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -11,7 +11,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import static com.ruolin.manage.annotation.BankCard.List;
+import static org.grace.luna.annotation.PostalCode.List;
 
 /**
  * @author Alex Wang
@@ -22,7 +22,7 @@ import static com.ruolin.manage.annotation.BankCard.List;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Repeatable(List.class)
-public @interface BankCard {
+public @interface PostalCode {
 
     String message() default "请输入正确的手机号";
 
@@ -31,14 +31,14 @@ public @interface BankCard {
     Class<? extends Payload>[] payload() default { };
 
     /**
-     * Defines several {@code @BankCard} constraints on the same element.
+     * Defines several {@code @PostalCode} constraints on the same element.
      *
-     * @see BankCard
+     * @see PostalCode
      */
     @Target({ElementType.METHOD, ElementType.FIELD, ElementType.ANNOTATION_TYPE, ElementType.CONSTRUCTOR, ElementType.PARAMETER, ElementType.TYPE_USE})
     @Retention(RetentionPolicy.RUNTIME)
     @Documented
     public @interface List {
-        BankCard[] value();
+        PostalCode[] value();
     }
 }

@@ -1,8 +1,8 @@
-package com.ruolin.manage.validator;
+package org.grace.luna.validator;
 
 import cn.hutool.core.lang.Validator;
 import cn.hutool.core.util.StrUtil;
-import com.ruolin.manage.annotation.IdentityCard;
+import org.grace.luna.annotation.IdentityCard;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

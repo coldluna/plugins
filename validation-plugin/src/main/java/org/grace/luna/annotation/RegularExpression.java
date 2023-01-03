@@ -1,6 +1,6 @@
-package com.ruolin.manage.annotation;
+package org.grace.luna.annotation;
 
-import com.ruolin.manage.validator.IdentityCardValidator;
+import org.grace.luna.validator.IdentityCardValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -11,7 +11,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import static com.ruolin.manage.annotation.MobilePhone.List;
+import static org.grace.luna.annotation.RegularExpression.List;
 
 /**
  * @author Alex Wang
@@ -22,23 +22,25 @@ import static com.ruolin.manage.annotation.MobilePhone.List;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Repeatable(List.class)
-public @interface MobilePhone {
+public @interface RegularExpression {
 
-    String message() default "请输入正确的手机号";
+    String regularExpression() default "";
+
+    String message() default "请按照规则输入正确的参数";
 
     Class<?>[] groups() default { };
 
     Class<? extends Payload>[] payload() default { };
 
     /**
-     * Defines several {@code @MobilePhone} constraints on the same element.
+     * Defines several {@code @RegularExpression} constraints on the same element.
      *
-     * @see MobilePhone
+     * @see RegularExpression
      */
     @Target({ElementType.METHOD, ElementType.FIELD, ElementType.ANNOTATION_TYPE, ElementType.CONSTRUCTOR, ElementType.PARAMETER, ElementType.TYPE_USE})
     @Retention(RetentionPolicy.RUNTIME)
     @Documented
     public @interface List {
-        MobilePhone[] value();
+        RegularExpression[] value();
     }
 }
