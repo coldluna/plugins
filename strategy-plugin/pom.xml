@@ -5,8 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <artifactId>plugins</artifactId>
-        <groupId>org.grace.luna</groupId>
-        <version>0.0.1.SNAPSHOT</version>
+        <groupId>io.github.coldluna</groupId>
+        <version>1.0.0.RELEASE</version>
     </parent>
 
     <artifactId>strategy-plugin</artifactId>

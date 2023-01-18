@@ -2,9 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <groupId>org.grace.luna</groupId>
+    <groupId>io.github.coldluna</groupId>
     <artifactId>plugins</artifactId>
-    <version>0.0.1.SNAPSHOT</version>
+    <version>1.0.0.RELEASE</version>
+    <name>plugins</name>
+    <description>common plugins for summer swift framework</description>
+    <url>https://github.com/coldluna/plugins</url>
 
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
@@ -13,6 +16,15 @@
         <module>strategy-plugin</module>
         <module>validation-plugin</module>
     </modules>
+
+    <properties>
+        <project.build.sourceEncoding>utf-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>utf-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <gpg.executable>D:\software\GnuPG/bin/gpg</gpg.executable>
+    </properties>
 
     <!--license-->
     <licenses>
@@ -119,17 +131,17 @@
                     </plugin>
 
                     <!--自动发布-->
-                    <plugin>
-                        <groupId>org.sonatype.plugins</groupId>
-                        <artifactId>nexus-staging-maven-plugin</artifactId>
-                        <version>1.6.8</version>
-                        <extensions>true</extensions>
-                        <configuration>
-                            <serverId>sonatype</serverId>
-                            <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
-                            <autoReleaseAfterClose>true</autoReleaseAfterClose>
-                        </configuration>
-                    </plugin>
+<!--                    <plugin>-->
+<!--                        <groupId>org.sonatype.plugins</groupId>-->
+<!--                        <artifactId>nexus-staging-maven-plugin</artifactId>-->
+<!--                        <version>1.6.8</version>-->
+<!--                        <extensions>true</extensions>-->
+<!--                        <configuration>-->
+<!--                            <serverId>sonatype</serverId>-->
+<!--                            <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>-->
+<!--                            <autoReleaseAfterClose>true</autoReleaseAfterClose>-->
+<!--                        </configuration>-->
+<!--                    </plugin>-->
                 </plugins>
             </build>
 
