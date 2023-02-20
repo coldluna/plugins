@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <groupId>io.github.coldluna</groupId>
-    <artifactId>plugins</artifactId>
+    <artifactId>summer-plugins</artifactId>
     <version>1.0.0.RELEASE</version>
     <name>plugins</name>
     <description>common plugins for summer swift framework</description>
@@ -13,10 +13,13 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>strategy-plugin</module>
-        <module>validation-plugin</module>
-        <module>desensitization-plugin</module>
-        <module>email-plugin</module>
+        <module>summer-strategy-plugin</module>
+        <module>summer-validation-plugin</module>
+        <module>summer-desensitization-plugin</module>
+        <module>summer-email-plugin</module>
+        <module>summer-hbase-plugin</module>
+        <module>summer-sms-plugin</module>
+        <module>summer-websocket-plugin</module>
     </modules>
 
     <properties>
