@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  org.grace.luna.config.FileTransportConfiguration,\
+  org.grace.luna.config.OssConfiguration
+
+
+
