@@ -2,6 +2,7 @@ package org.grace.luna.template.oss;
 
 import cn.hutool.core.collection.CollectionUtil;
 import io.minio.*;
+import io.minio.http.Method;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.grace.luna.model.Bucket;
@@ -50,7 +51,8 @@ public class MinioTemplate extends OssTemplate {
     @SneakyThrows
     @Override
     public String getObjectUrl(String bucketName, String objectName, Long leaseTime) {
-        return this.minioClient.getPresignedObjectUrl(GetPresignedObjectUrlArgs.builder().bucket(bucketName).object(objectName).expiry(leaseTime.intValue()).build());
+        return this.minioClient.getPresignedObjectUrl(GetPresignedObjectUrlArgs.builder().bucket(bucketName).object(objectName).expiry(leaseTime.intValue())
+                .method(Method.GET).build());
     }
 
     @SneakyThrows

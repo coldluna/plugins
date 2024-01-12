@@ -3,8 +3,20 @@
 ## minio
 
 ### 引入依赖
+```pom.xml
+<!--请覆盖okhttp3的版本-->
+    <properties>
+        <okhttp3.version>4.8.1</okhttp3.version>
+    </properties>
 
-略
+        <dependency>
+            <groupId>io.github.coldluna</groupId>
+            <artifactId>summer-file-io-plugin</artifactId>
+            <version>1.0.0.RELEASE</version>
+        </dependency>
+```
+
+
 
 ### 配置yml
 
